@@ -1,0 +1,6 @@
+version: 1
+config:
+  name: "example-repo"
+
+children:
+  - source: github.com/getsyncer/public-sync-modules/opensourcegolib

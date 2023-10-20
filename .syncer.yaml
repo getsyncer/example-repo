@@ -1,6 +1,7 @@
 version: 1
 config:
   name: "example-repo"
+  repush_on_actor: cep21
 
 children:
   - source: github.com/getsyncer/public-sync-modules/opensourcegolib

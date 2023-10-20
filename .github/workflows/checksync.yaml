@@ -12,13 +12,26 @@ on:
 
 jobs:
   check:
-    name: Check for changes
+    name: Check for changesif: github.event_name != 'pull_request' || github.actor != 'cep21'
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code (without token)
+      - name: Check out code
         uses: actions/checkout@v4
       - name: Check for changes
-        if: steps.get_workflow_token.outputs.token == ''
         uses: getsyncer/action-syncer/checkpr@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
+  fix:
+    name: Fix any sync changes
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.actor == 'cep21'
+    steps:
+      - name: Check out code (with token)
+        uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+      - name: Push back any changes
+        uses: getsyncer/action-syncer/updatepr@main
+        with:
+          token: ${{ steps.generate_token.outputs.token }}

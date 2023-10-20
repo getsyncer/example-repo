@@ -31,7 +31,7 @@ jobs:
       - name: Check out code (with token)
         uses: actions/checkout@v4
         with:
-          ssh-key: ${{ secrets.DEPLOY_KEY }a
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
           fetch-depth: 0
       - name: Push back any changes
         uses: getsyncer/action-syncer/updatepr@main

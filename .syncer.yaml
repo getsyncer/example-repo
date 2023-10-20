@@ -12,4 +12,4 @@ logic:
 syncs:
   - logic: helloworld
     config:
-      message: "Some custom configuration!"
+      ExtraContent: "Some custom configuration!"

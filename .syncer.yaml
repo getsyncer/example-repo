@@ -2,6 +2,8 @@ version: 1
 config:
   name: "example-repo"
   repush_on_actor: cep21
+  ExtraContent: "Some custom configuration!"
+  extra_content: "Some custom configuration!"
 
 children:
   - source: github.com/getsyncer/public-sync-modules/opensourcegolib
@@ -12,4 +14,4 @@ logic:
 syncs:
   - logic: helloworld
     config:
-      message: "Some custom configuration!"
+      ExtraContent: "Some custom configuration!"

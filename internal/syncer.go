@@ -6,6 +6,7 @@
 package main
 
 import (
+	_ "github.com/getsyncer/example-sync/helloworld"
 	_ "github.com/getsyncer/public-sync-modules/opensourcegolib"
 	"github.com/getsyncer/syncer-core/syncerexec"
 )

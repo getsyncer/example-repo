@@ -4,3 +4,11 @@ config:
 
 children:
   - source: github.com/getsyncer/public-sync-modules/opensourcegolib
+
+logic:
+  - source: github.com/getsyncer/example-sync/helloworld
+
+syncs:
+  - logic: helloworld
+    config:
+      message: "Some custom configuration!"

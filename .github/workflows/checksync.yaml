@@ -12,7 +12,8 @@ on:
 
 jobs:
   check:
-    name: Check for changesif: github.event_name != 'pull_request' || github.actor != 'cep21'
+    name: Check for changes
+    if: github.event_name != 'pull_request' || github.actor != 'cep21'
     runs-on: ubuntu-latest
     steps:
       - name: Check out code

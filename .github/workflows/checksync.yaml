@@ -11,6 +11,14 @@ on:
   workflow_dispatch: {}
 
 jobs:
+  debug:
+    name: debug output
+    runs-on: ubuntu-latest
+    steps:
+      - name: run cmd
+        run: echo $PR_AUTHOR
+        env:
+          PR_AUTHOR: github.event.pull_request.user.login
   check:
     name: Check for changes
     if: github.event_name != 'pull_request' || github.actor != 'cep21'

@@ -3,7 +3,7 @@ module github.com/getsyncer/example-repo
 go 1.21.3
 
 require (
-	github.com/getsyncer/example-sync v1.1.2
+	github.com/getsyncer/example-sync v1.2.1
 	github.com/getsyncer/public-sync-modules v1.31.1
 	github.com/getsyncer/syncer-core v1.15.11
 )

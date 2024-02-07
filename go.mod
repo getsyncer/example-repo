@@ -1,6 +1,6 @@
 module github.com/getsyncer/example-repo
 
-go 1.21.7
+go 1.22.0
 
 require (
 	github.com/getsyncer/example-sync v1.3.6
